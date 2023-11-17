@@ -18,14 +18,15 @@ class Movie < ApplicationRecord
 
   # has_many(:characters, class_name: "Character", foreign_key:"character_id")
   has_many(:characters)
+  belongs_to(:director)
 
-  def director
-    key = self.director_id
+  # def director
+  #   key = self.director_id
 
-    matching_set = Director.where({ :id => key })
+  #   matching_set = Director.where({ :id => key })
 
-    the_one = matching_set.at(0)
+  #   the_one = matching_set.at(0)
 
-    return the_one
-  end
+  #   return the_one
+  # end
 end
