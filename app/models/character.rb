@@ -11,7 +11,8 @@
 #
 class Character < ApplicationRecord
   # belongs_to(:name_that_we_want,:class_name => "",:foreign_key="")
-  belongs_to(:actor,class_name: "Actor",foreign_key:"actor_id")
+  # belongs_to(:actor,class_name: "Actor",foreign_key:"actor_id")
+  belongs_to(:actor)
 
   def movie
     key = self.movie_id
